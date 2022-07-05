@@ -1,8 +1,5 @@
 {
   "name": "python_july",
-  "jest": {
-    "bail": 2
-  },
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
