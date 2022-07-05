@@ -1,23 +1,49 @@
 
 ## TODO: Print all the integers from 1 to 255.
-def print1to255():
-    pass
+# def print1to255():
+#     for i in range(1, 256):
+#         print(i)
 
+# print1to255()
 ## TODO: Print integers from 0 to 255, and with each integer print the sum so far.
-def printIntsAndSum0To255():
-    pass
+# def printIntsAndSum0To255():
+#     sum = 0
+#     for i in range(256):
+#         sum += i
+#         print(sum)
+
+# printIntsAndSum0To255()
+
 
 ## TODO: Given an array, find and print its largest element.
-def printMaxOfArray(arr):
-    pass
+# def printMaxOfArray(arr):
+#     # print(max(arr))
+#     max = arr[0]
+#     for num in arr:
+#         if max < num:
+#             max = num
+#     print(max)
+
+# printMaxOfArray([1,3,5, 78, 4, 2])
 
 ## TODO: Create an array with all the odd integers between 1 and 255 (inclusive).
-def returnOddsArray1to255():
-    pass
+# def returnOddsArray1to255():
+#     for i in range(1, 256):
+#         if i % 2 == 1:
+#             print(i)
+
+# returnOddsArray1to255()
 
 ## TODO: Given an array and a value Y, count and print the number of array values greater than Y.
 def returnArrayCountGreaterThanY(arr, y):
-    pass
+    count = 0
+    for num in arr:
+        if num > y:
+            print(num)
+            count += 1
+    print(count)
+
+returnArrayCountGreaterThanY([1,2,3,4,5,6], 3)
 
 ## TODO: Given an array, print the max, min and average values for that array.
 def printMaxMinAverageArrayVals(arr):
