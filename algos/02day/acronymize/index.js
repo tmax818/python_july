@@ -3,6 +3,12 @@
   Create a function that, given a string, returns the string’s acronym 
   (first letter of each word capitalized). 
   Do it with .split first if you need to, then try to do it without
+  R - read/restate
+  I - input 
+  O - output
+  T - talk
+
+  WALK
 */
 
 const str1 = "object oriented programming";
@@ -26,4 +32,26 @@ const expected4 = "GIT";
  * @param {string} str A string to be turned into an acronym.
  * @returns {string} The acronym.
  */
-function acronymize(str) {}
+function acronymize(str) {
+  // create a variable to store the first index
+  var result = "";
+// make the string an array
+  let splitStr = str.trim().replace(/ +/g, ' ').split("");
+  console.log(splitStr)
+  
+
+
+// target the first index of each element of the array
+for(let i = 0; i < splitStr.length; i++){
+  console.log(splitStr[i])
+  result += splitStr[i][0]
+} 
+console.log(result.toUpperCase())
+// add it to the variable 
+// return the new string
+}
+
+acronymize(str1)
+acronymize(str2)
+acronymize(str3)
+acronymize(str4)
