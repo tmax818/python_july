@@ -1,8 +1,5 @@
 class User:
 
-    users= []
-    motto = "We're the best"
-
     def __init__(self, first_name, last_name, email, age, is_rewards_member = False, gold_card_points = 0):
         self.first_name = first_name
         self.last_name = last_name
@@ -24,7 +21,7 @@ class User:
         self.gold_card_points = 200
         
     def spend_points(self, amount):
-        pass
+        self.gold_card_points -= amount
 
 
 user1 = User('Tyler', 'Maxwell', 'tmax@email.com', 39)
