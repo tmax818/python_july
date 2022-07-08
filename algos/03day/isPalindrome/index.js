@@ -25,4 +25,31 @@
    * @param {string} str
    * @returns {boolean} Whether the given str is a palindrome or not.
    */
-  function isPalindrome(str) {}
+  function isPalindrome(str) {
+    for(let i = 0; i < Math.floor(str.length/2); i++){
+        if(str[i] !== str[str.length - 1 - i]){
+            return false
+        }
+    }
+    return true
+  }
+
+  function isPalindrome2(str){
+    let reversedStr = str.split("").reverse().join("")
+    console.log(reversedStr)
+    if(reversedStr === str){
+        return true
+    }
+    else{
+        return false
+    }
+  }
+
+//   console.log(isPalindrome(str1))
+//   console.log(isPalindrome(str2))
+//   console.log(isPalindrome(str3))
+//   console.log(isPalindrome(str4))
+  console.log(isPalindrome2(str1))
+  console.log(isPalindrome2(str2))
+  console.log(isPalindrome2(str3))
+  console.log(isPalindrome2(str4))
