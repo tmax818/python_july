@@ -31,4 +31,7 @@ const expected5 = false;
  * @param {string} str
  * @returns {boolean} Whether the parenthesis are valid.
  */
-function parensValid(str) {}
+function parensValid(str) {
+}
+
+console.log(parensValid(str1))
