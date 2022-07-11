@@ -17,6 +17,10 @@ const expected3 = false;
 
 const str4 = "a(b))(c";
 const expected4 = false;
+
+
+const str5 = ")a(b))(c";
+const expected5 = false;
 // Explanation: same number of opens and closes but the 2nd closing closes nothing.
 
 /**
