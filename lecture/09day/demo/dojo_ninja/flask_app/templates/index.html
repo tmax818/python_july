@@ -9,28 +9,24 @@
     <title>index</title>
 </head>
 <body>
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">email</th>
-            <th scope="col">actions</th>
-          </tr>
-        </thead>
-        <tbody>
-            {% for user in users  %}
-          <tr>
-            <th scope="row">1</th>
-            <td>{{user.first_name}}</td>
-            <td>{{user.last_name}}</td>
-            <td>{{user.email}}</td>
-            <td> <a href='/user/edit/{{user.id}}'>edit</a> | <a href='/user/destroy/{{user.id}}'>delete</a> </td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <form action="/dojo/create" method="post">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Name</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      <div class="col">
+        {% for dojo in dojos  %}
+          <p><a href="/dojo/show/{{dojo.id}}">{{dojo.name}}</a></p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
       <a href="/user/new">create user</a>
 </body>
 </html>
