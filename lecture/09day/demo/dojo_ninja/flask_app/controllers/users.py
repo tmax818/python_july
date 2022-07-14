@@ -20,23 +20,27 @@ def create_user():
 # ! ////////  READ or RETRIEVE  //////////
 @app.route('/')
 def index():
-# ! makes a call to the DB via the model
     users = User.get_all()
-# ! renders the template, passing data from the DB
+
     return render_template('index.html', users = users)
 
 # ! //////// UPDATE  //////////
 # ! POST requires two routes
 
+# ! This one displays the form
 @app.route('/user/edit/<int:id>')
 def edit_user(id):
     data ={'id': id}
     return render_template('edit_user.html', user = User.get_one(data))
 
+# ! This one handles the data from the form
 @app.route('/user/update', methods=['POST'])
 def update_user():
     User.update(request.form)
     return redirect('/')
+
+
+# ! //// DELETE ////
 
 @app.route('/user/destroy/<int:id>')
 def destroy_user(id):
