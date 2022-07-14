@@ -7,11 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    {{friends}}
-    <h1>Friends</h1>
-    {% for friend in friends  %}
-        <p>{{friend.first_name}} {{friend.last_name}}</p>
-        <p>{{friend.occupation}}</p>
+
+    <h1>Index</h1>
+    {% for user in users  %}
+        <p> Full Name:  {{user.first_name}} {{user.last_name}}</p>
+        <p>email {{user.email}}</p>
     {% endfor %}
+
+    <a href="/users/new">New User</a>
 </body>
 </html>
