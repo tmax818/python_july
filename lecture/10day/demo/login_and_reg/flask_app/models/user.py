@@ -14,16 +14,18 @@ class User:
     def save(cls, data):
         pass
 
+    @classmethod
+    def get_by_email(cls, data) -> object or bool:
+        pass
+
+    @classmethod
+    def get_one_with_things(cls, data:dict)-> list:
+        pass
+
     @staticmethod
     def validate_user(user:dict):
         is_valid = True
-        if len(user['first_name']) < 2:
-            flash("you messed up, try again!!!")
-            is_valid = False
-        if len(user['last_name']) < 2:
-            flash("you messed up again, dummy, try again!!!")
-            is_valid = False
-        
+        # validations go here
         return is_valid
 
 
