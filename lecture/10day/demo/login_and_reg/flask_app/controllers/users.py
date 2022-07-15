@@ -1,10 +1,6 @@
 from flask_app import app, render_template, redirect, request
 from flask_app.models.user import User
 
-
-
-# CREATE USER
-# ! display the form
 @app.route('/')
 def index():
     return render_template('index.html')
