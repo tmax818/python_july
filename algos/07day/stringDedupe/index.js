@@ -18,6 +18,10 @@ const expected3 = "";
 const str4 = "aa";
 const expected4 = "a";
 
+const str5 = "Mississippi";
+const expected5 = "Misp";
+const expected6Bonus = "Mspi";
+
 /**
  * De-dupes the given string.
  * - Time: O(?).
