@@ -10,6 +10,13 @@
 <body>
     <div class="container">
         <h1>Add Recipe</h1>
+        {% with messages = get_flashed_messages() %}     <!-- declare a variable called messages -->
+        {% if messages %}                            <!-- check if there are any messages -->
+            {% for message in messages %}            <!-- loop through the messages -->
+                <p>{{message}}</p>                   <!-- display each message in a paragraph tag -->
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
         <form action="/create/recipe" method="post">
             <input type="hidden" name="user_id" value="{{session.user_id}}">
             <div>
@@ -30,7 +37,7 @@
                 under 30 minutes:
                 <input type="radio" id="yes" name="under_30" value="1">
                 <label for="yes">yes</label>
-                <input type="radio" id="no" name="under_30" value="0">
+                <input type="radio" id="no" name="under_30" value="0" checked>
                 <label for="no">no</label><br>
             </div>
                 <input type="submit" value="create">

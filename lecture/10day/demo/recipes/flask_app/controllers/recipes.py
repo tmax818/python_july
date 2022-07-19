@@ -17,6 +17,9 @@ def new_recipe():
 @app.route('/create/recipe', methods=['post'])
 def create_recipe():
     print(request.form)
+    # this is the validation step 
+    if not Recipe.validate_recipe(request.form):
+        return redirect('/recipes/new')
     Recipe.save(request.form)
     return redirect('/recipes')
 

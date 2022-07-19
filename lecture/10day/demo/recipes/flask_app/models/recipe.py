@@ -37,3 +37,23 @@ class Recipe:
         query = "SELECT * FROM recipes WHERE id=%(id)s"
         result = connectToMySQL(DATABASE).query_db(query, data)
         return Recipe(result[0])
+
+    @staticmethod
+    def validate_recipe(recipe):
+        is_valid = True
+        if len(recipe['name']) < 3:
+            flash("you messed up, try again!!!", "first_name")
+            is_valid = False     
+        if len(recipe['description']) < 3:
+            flash("you messed up, try again!!!", "first_name")
+            is_valid = False     
+        if len(recipe['instructions']) < 3:
+            flash("you messed up, try again!!!", "first_name")
+            is_valid = False     
+        if len(recipe['date_made']) < 2:
+            flash("you messed up, try again!!!", "first_name")
+            is_valid = False     
+        if len(recipe['under_30']) < 2:
+            flash("you messed up, try again!!!", "first_name")
+            is_valid = False     
+        return is_valid
