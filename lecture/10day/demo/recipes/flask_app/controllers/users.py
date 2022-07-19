@@ -26,7 +26,7 @@ def register_user():
     session['user_id'] = user_id
     session['first_name'] = request.form['first_name']
     # redirect to app page
-    return redirect(f"/users/show/{user_id}")
+    return redirect("/recipes")
 
 @app.route('/users/login', methods = ['post'])
 def login_user():
@@ -47,7 +47,7 @@ def login_user():
     session['user_id'] = user_in_db.id
     session['first_name'] = user_in_db.first_name
     # redirect to app page
-    return redirect(f"/users/show/{user_in_db.id}")
+    return redirect("/recipes")
 
 @app.route('/users/show/<int:id>')
 def show_user(id):
