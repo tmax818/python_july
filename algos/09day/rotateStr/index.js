@@ -37,4 +37,14 @@ to the original position.
  *    right.
  * @returns {string} The string rotated by the given amount.
  */
-function rotateStr(str, amnt) {}
+function rotateStr(str, amnt) {
+    amnt %= str.length
+    let res = ""
+    for(let i = str.length - amnt; i < str.length; i++){
+        res += str[i]
+    }
+    return res
+
+}
+
+console.log(rotateStr(str, rotateAmnt1))
