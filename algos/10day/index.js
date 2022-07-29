@@ -1,18 +1,25 @@
-/* 
-  Given a string that may have extra spaces at the start and the end,
-  return a new string that has the extra spaces at the start and the end trimmed (removed)
-  do not remove any other spaces.
-*/
+// countdown
 
-const str1 = "   hello world     ";
-const expected1 = "hello world";
+// write a function that counts down from a given number
 
-/**
- * Trims any leading or trailing white space from the given str.
- * - Time: O(?).
- * - Space: O(?).
- * @param {string} str
- * @returns {string} The given string with any leading or trailing white space
- *    stripped.
- */
-function trim(str) {}
+function countdown(num){
+  for(let i = num; i >= 0; i--){
+    console.log(i)
+  }
+}
+
+// countdown(5)
+
+function rcountdown(num){
+  // print that number
+  console.log(num)
+  // call the fuction again until n = 0
+  // everytime function is called, call with n - 1
+  if (num > 0){
+    rcountdown(num - 1)
+  }
+
+}
+
+
+rcountdown(5)
