@@ -61,9 +61,9 @@ Burbank
 --
 
 ```py
-ninja1 = Ninja('Cam', 24)
-ninja2 = Ninja('Ben', 26)
-ninja3 = Ninja('Aaron', 23)
+ninja1 = Ninja('Cameron', 24)
+ninja2 = Ninja('Duque', 26)
+ninja3 = Ninja('Nisrine', 23)
 ```
 <!-- .element: class="fragment fade-in" -->
 
@@ -73,7 +73,7 @@ print(ninja1.name)
 <!-- .element: class="fragment fade-in" -->
 
 ```
-Cam
+Cameron
 ```
   <!-- .element: class="fragment fade-in" -->
 ---
